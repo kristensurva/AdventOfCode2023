@@ -9,8 +9,10 @@ public class Program {
         //System.out.println(Day1.solveTask2(readInFile("Inputs/Day1Input.txt")));
         //System.out.println(Day2.solveTask1(readInFile("Inputs/Day2Input.txt")));
         //System.out.println(Day2.solveTask2(readInFile("Inputs/Day2Input.txt")));
-        System.out.println(Day3.solveTask1(readInFile("Inputs/Day3Input.txt")));
-        System.out.println(Day3.solveTask2(readInFile("Inputs/Day3Input.txt")));
+        //System.out.println(Day3.solveTask1(readInFile("Inputs/Day3Input.txt")));
+        //System.out.println(Day3.solveTask2(readInFile("Inputs/Day3Input.txt")));
+        System.out.println(Day4.solveTask1(readInFile("Inputs/Day4Input.txt")));
+        System.out.println(Day4.solveTask2(readInFile("Inputs/Day4Input.txt")));
         //System.out.println(Day8.solveTask1(readInFile("Inputs/Day8Input.txt")));
         //System.out.println(Day8.solveTask2(readInFile("Inputs/Day8Input.txt")));
     }
