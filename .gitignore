@@ -1,2 +1,3 @@
 # Project exclude paths
 /out/
+/Inputs/Day5Input.txt
