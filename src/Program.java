@@ -15,8 +15,10 @@ public class Program {
         //System.out.println(Day4.solveTask2(readInFile("Inputs/Day4Input.txt")));
         //System.out.println(Day5.solveTask1(readInFile("Inputs/Day5Input.txt")));
         //System.out.println(Day5.solveTask2(readInFile("Inputs/Day5Input.txt")));
-        System.out.println(Day6.solveTask1(readInFile("Inputs/Day6Input.txt")));
-        System.out.println(Day6.solveTask2(readInFile("Inputs/Day6Input.txt")));
+        //System.out.println(Day6.solveTask1(readInFile("Inputs/Day6Input.txt")));
+        //System.out.println(Day6.solveTask2(readInFile("Inputs/Day6Input.txt")));
+        System.out.println(Day7.solveTask1(readInFile("Inputs/Day7Input.txt")));
+        System.out.println(Day7.solveTask2(readInFile("Inputs/Day7Input.txt")));
         //System.out.println(Day8.solveTask1(readInFile("Inputs/Day8Input.txt")));
         //System.out.println(Day8.solveTask2(readInFile("Inputs/Day8Input.txt")));
 

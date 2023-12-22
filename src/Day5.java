@@ -40,8 +40,6 @@ public class Day5 {
     }
 
     public static long solveTask2(List<String> input) {
-        // Idea, go backwards, prioritize the ones mappings that make numbers smaller, then from the next take the ranges that put it in the right range to go smaller in the last one.
-        // We sort the mappings themselves, and check them in order, going upwards.
         ArrayList<Mapping> mappings = processMappings(input);
         Collections.sort(mappings);
         ArrayList<ArrayList<Mapping>> mappingsByDepth = new ArrayList<>();
@@ -61,7 +59,7 @@ public class Day5 {
         System.out.println(mappings);
         long smallestAnswer = Long.MAX_VALUE;
         for (Mapping mapping : mappings) {
-            long answer = recFindLowestValue(mapping, new StringBuilder(), new ArrayList<>());
+            long answer = recFindLowestValue(mapping, new ArrayList<>());
             if (answer<smallestAnswer) {
                 smallestAnswer = answer;
             }
@@ -72,9 +70,8 @@ public class Day5 {
 
     static ArrayList<Mapping> initialValues = new ArrayList<>();
     static int answerCount = 0;
-    static long recFindLowestValue(Mapping mapping, StringBuilder pathString, ArrayList<Mapping> path) {
+    static long recFindLowestValue(Mapping mapping, ArrayList<Mapping> path) {
         long lowestAnswer = Long.MAX_VALUE;
-        pathString.append("[" + mapping.destinationStartRange+ " " + mapping.sourceStartRange + " "+ mapping.rangeLength +  "] -> ");
         path.add(mapping);
         // Base: We are at the last depth, we check for the initial values now.
         if (mapping.depthLevel==0 || mapping.lowerMappings.size()==0) {
@@ -90,7 +87,7 @@ public class Day5 {
         }
         // For all the inner mappings.
         for (Mapping suitableMapping : mapping.lowerMappings) {
-            long answer = recFindLowestValue(suitableMapping, new StringBuilder(pathString), new ArrayList<>(path));
+            long answer = recFindLowestValue(suitableMapping, new ArrayList<>(path));
             if (answer<lowestAnswer) {
                 lowestAnswer = answer;
             }
