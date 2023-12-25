@@ -210,20 +210,6 @@ public class Day10 {
         return AB.row*BC.col-AB.col*BC.row;
     }
 
-
-    static void printMapWithPosition(Coordinates position, char[][] map) {
-        for (int row = 0; row < map.length; row++) {
-            for (int col = 0; col < map[row].length; col++) {
-                if (position.row==row && position.col==col) {
-                    System.out.print('*');
-                }
-                else System.out.print(map[row][col]);
-            }
-            System.out.println();
-        }
-        System.out.println();
-    }
-
     static char[][] processInput(List<String> input) {
         char[][] map = new char[input.size()][input.get(0).length()];
         for (int row = 0; row < input.size(); row++) {
@@ -233,39 +219,6 @@ public class Day10 {
         }
         return map;
     }
-
-    static char[][] processInputPretty(List<String> input) {
-        char[][] map = new char[input.size()][input.get(0).length()];
-        for (int row = 0; row < input.size(); row++) {
-            for (int col = 0; col < input.get(row).length(); col++) {
-                char c;
-                if (input.get(row).charAt(col)=='|') {
-                    c = '│';
-                }
-                else if (input.get(row).charAt(col)=='-') {
-                    c = '─';
-                }
-                else if (input.get(row).charAt(col)=='L') {
-                    c = '└';
-                }
-                else if (input.get(row).charAt(col)=='J') {
-                    c = '┘';
-                }
-                else if (input.get(row).charAt(col)=='7') {
-                    c = '┐';
-                }
-                else if (input.get(row).charAt(col)=='F') {
-                    c = '┌';
-                }
-                else {
-                    c = input.get(row).charAt(col);
-                }
-                map[row][col] = c;
-            }
-        }
-        return map;
-    }
-
 
     static Coordinates getStartPosition() {
         for (int row = 0; row < map.length; row++) {
@@ -402,5 +355,50 @@ public class Day10 {
             }
         }
         return new Coordinates(-1, -1);
+    }
+
+    static void printMapWithPosition(Coordinates position, char[][] map) {
+        for (int row = 0; row < map.length; row++) {
+            for (int col = 0; col < map[row].length; col++) {
+                if (position.row==row && position.col==col) {
+                    System.out.print('*');
+                }
+                else System.out.print(map[row][col]);
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    static char[][] processInputPretty(List<String> input) {
+        char[][] map = new char[input.size()][input.get(0).length()];
+        for (int row = 0; row < input.size(); row++) {
+            for (int col = 0; col < input.get(row).length(); col++) {
+                char c;
+                if (input.get(row).charAt(col)=='|') {
+                    c = '│';
+                }
+                else if (input.get(row).charAt(col)=='-') {
+                    c = '─';
+                }
+                else if (input.get(row).charAt(col)=='L') {
+                    c = '└';
+                }
+                else if (input.get(row).charAt(col)=='J') {
+                    c = '┘';
+                }
+                else if (input.get(row).charAt(col)=='7') {
+                    c = '┐';
+                }
+                else if (input.get(row).charAt(col)=='F') {
+                    c = '┌';
+                }
+                else {
+                    c = input.get(row).charAt(col);
+                }
+                map[row][col] = c;
+            }
+        }
+        return map;
     }
 }
