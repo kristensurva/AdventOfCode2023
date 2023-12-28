@@ -24,9 +24,11 @@ public class Program {
         //System.out.println(Day9.solveTask1(readInFile("Inputs/Day9Input.txt")));
         //System.out.println(Day9.solveTask2(readInFile("Inputs/Day9Input.txt")));
         //System.out.println(Day10.solveTask1(readInFile("Inputs/Day10Test.txt")));
-        //System.out.println(((3+1)+4)%4);
-        System.out.println(Day10.solveTask1(readInFile("Inputs/Day10Input.txt")));
-        System.out.println(Day10.solveTask2(readInFile("Inputs/Day10Input.txt")));
+        //System.out.println(Day10.solveTask1(readInFile("Inputs/Day10Input.txt")));
+        //System.out.println(Day10.solveTask2(readInFile("Inputs/Day10Input.txt")));
+        //System.out.println(Day11.solveTask1(readInFile("Inputs/Day11Test.txt")));
+        System.out.println(Day11.solveTask2(readInFile("Inputs/Day11Input.txt")));
+
 
 
     }
